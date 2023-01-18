@@ -45,7 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">QMMM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#qmhub.QMMM"><code class="docutils literal notranslate"><span class="pre">QMMM</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#qmhub.QMMM.__init__"><code class="docutils literal notranslate"><span class="pre">QMMM.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qmhub.QMMM.setup_simulation"><code class="docutils literal notranslate"><span class="pre">QMMM.setup_simulation()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -83,9 +83,14 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qmhub.</span></span><span class="sig-name descname"><span class="pre">QMMM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/qmhub.html#QMMM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.QMMM" title="Permalink to this definition"></a></dt>
 <dd><p>QMHub python module</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="qmhub.QMMM.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/qmhub.html#QMMM.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.QMMM.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>driver and cwd has default of none</p>
+<dt class="sig sig-object py" id="qmhub.QMMM.setup_simulation">
+<span class="sig-name descname"><span class="pre">setup_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'md'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/qmhub.html#QMMM.setup_simulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.QMMM.setup_simulation" title="Permalink to this definition"></a></dt>
+<dd><p>Prepares a simulations with given protocols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>protocol</strong> (<em>str, optional</em>) – <cite>md</cite> is molecular dynamics.`mts` is multiple time step molecular dynamics, where [][][]. Default is <cite>md</cite></p>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -110,7 +115,7 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_results</span></code>([output])</p></td>
 <td><p>Prints the simulation energy figures and energy gradient base on current simulations can take output of option, default is None</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_simulation</span></code>([protocol])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#qmhub.QMMM.setup_simulation" title="qmhub.QMMM.setup_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_simulation</span></code></a>([protocol])</p></td>
 <td><p>Prepares a simulations with given protocols.</p></td>
 </tr>
 </tbody>
