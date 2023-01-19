@@ -99,7 +99,7 @@
     <span class="k">def</span> <span class="nf">load_system</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">,</span> <span class="n">save_input</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;Loads a saved simulation from the step it was saved at. Takes the simualtion as input, which has saved it&#39;s last step.</span>
 <span class="sd">        </span>
-<span class="sd">        Args</span>
+<span class="sd">        Args:</span>
 <span class="sd">            input (str): The path to a binary file, text file, or a named pipe (fifo).</span>
 <span class="sd">            save_input (Boolean, optional): If the files are to be kept after running.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -110,7 +110,7 @@
 <div class="viewcode-block" id="QMMM.build_model"><a class="viewcode-back" href="../../QMMM.html#qmhub.QMMM.build_model">[docs]</a>    <span class="k">def</span> <span class="nf">build_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switching_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">swdist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pbc</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;Creates a model to store atome positions and charges, takes several options with defaults of `None`.</span>
 <span class="sd">        </span>
-<span class="sd">        Args</span>
+<span class="sd">        Args:</span>
 <span class="sd">            switching_type (optional): </span>
 <span class="sd">            cutoff (optional): </span>
 <span class="sd">            swdit (optional):</span>
@@ -135,7 +135,7 @@
 <div class="viewcode-block" id="QMMM.add_engine"><a class="viewcode-back" href="../../QMMM.html#qmhub.QMMM.add_engine">[docs]</a>    <span class="k">def</span> <span class="nf">add_engine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">group_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;The engine to model atom positions and charges. Default engine name is `engine`.</span>
 <span class="sd">        </span>
-<span class="sd">        Args</span>
+<span class="sd">        Args:</span>
 <span class="sd">            engine ():</span>
 <span class="sd">            name (str, optional): </span>
 <span class="sd">            group_name (str, optional): </span>
@@ -174,7 +174,7 @@
 <div class="viewcode-block" id="QMMM.return_results"><a class="viewcode-back" href="../../QMMM.html#qmhub.QMMM.return_results">[docs]</a>    <span class="k">def</span> <span class="nf">return_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;Prints the simulation energy figures and energy gradient base on current simulations.</span>
 <span class="sd">        </span>
-<span class="sd">        args</span>
+<span class="sd">        Args:</span>
 <span class="sd">            output (str, optional): &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">return_results</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">simulation</span><span class="o">.</span><span class="n">energy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">simulation</span><span class="o">.</span><span class="n">energy_gradient</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span></div></div>
 </pre></div>
