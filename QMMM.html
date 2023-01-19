@@ -88,7 +88,7 @@
 <dd><p>Prepares a simulations with given protocols.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>protocol</strong> (<em>str, optional</em>) – <cite>md</cite> is molecular dynamics.`mts` is multiple time step molecular dynamics, where [][][]. Default is <cite>md</cite></p>
+<dd class="field-odd"><p><strong>protocol</strong> (<em>str, optional</em>) – <cite>md</cite> is molecular dynamics.`mts` is multiple time step molecular dynamics, where multiple steps of molecular simulation are made between each quantum mechanical step. Default is <cite>md</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -104,16 +104,16 @@
 <td><p>driver and cwd has default of none</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_engine</span></code>(engine[, name, group_name, cwd, ...])</p></td>
-<td><p>Default engine name is <cite>engine</cite></p></td>
+<td><p>The engine to model atom positions and charges.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_model</span></code>([switching_type, cutoff, ...])</p></td>
-<td><p>Creates a model with the defaults of</p></td>
+<td><p>Creates a model to store atome positions and charges, takes several options with defaults of <cite>None</cite>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_system</span></code>(input[, save_input])</p></td>
 <td><p>'Loads a saved simulation from the step it was saved at.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_results</span></code>([output])</p></td>
-<td><p>Prints the simulation energy figures and energy gradient base on current simulations can take output of option, default is None</p></td>
+<td><p>Prints the simulation energy figures and energy gradient base on current simulations.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#qmhub.QMMM.setup_simulation" title="qmhub.QMMM.setup_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setup_simulation</span></code></a>([protocol])</p></td>
 <td><p>Prepares a simulations with given protocols.</p></td>
