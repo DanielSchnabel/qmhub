@@ -83,9 +83,9 @@
 <span class="kn">from</span> <span class="nn">.utils.darray</span> <span class="kn">import</span> <span class="n">DependArray</span>
 
 
-<div class="viewcode-block" id="Atoms"><a class="viewcode-back" href="../../Atoms.html#qmhub.atoms.Atoms">[docs]</a><span class="k">class</span> <span class="nc">Atoms</span><span class="p">(</span><span class="n">Sequence</span><span class="p">):</span>
+<div class="viewcode-block" id="Atoms"><a class="viewcode-back" href="../../api.html#qmhub.atoms.Atoms">[docs]</a><span class="k">class</span> <span class="nc">Atoms</span><span class="p">(</span><span class="n">Sequence</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; QMHub atom object&#39;&#39;&#39;</span>
-<div class="viewcode-block" id="Atoms.__init__"><a class="viewcode-back" href="../../Atoms.html#qmhub.atoms.Atoms.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">charges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Atoms.__init__"><a class="viewcode-back" href="../../api.html#qmhub.atoms.Atoms.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">charges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Stores position, charge, and element of atom object</span>
 <span class="sd">        </span>
@@ -98,7 +98,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">charges</span> <span class="o">=</span> <span class="n">charges</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">elements</span></div>
 
-<div class="viewcode-block" id="Atoms.new"><a class="viewcode-back" href="../../Atoms.html#qmhub.atoms.Atoms.new">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Atoms.new"><a class="viewcode-back" href="../../api.html#qmhub.atoms.Atoms.new">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">n_atoms</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Appends the number of atoms to arrays of atom positions, charges, and elements.</span>
@@ -115,7 +115,7 @@
 
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Atoms.from_atoms"><a class="viewcode-back" href="../../Atoms.html#qmhub.atoms.Atoms.from_atoms">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Atoms.from_atoms"><a class="viewcode-back" href="../../api.html#qmhub.atoms.Atoms.from_atoms">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_atoms</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">atoms</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Appends an atoms positons, charge, and elements to arrays of atom positions, charges, and elements.</span>
