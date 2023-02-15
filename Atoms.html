@@ -46,7 +46,15 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="QMMM.html">QMMM</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Atoms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Atoms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qmhub.atoms.Atoms"><code class="docutils literal notranslate"><span class="pre">Atoms</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qmhub.atoms.Atoms.__init__"><code class="docutils literal notranslate"><span class="pre">Atoms.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qmhub.atoms.Atoms.new"><code class="docutils literal notranslate"><span class="pre">Atoms.new()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qmhub.atoms.Atoms.from_atoms"><code class="docutils literal notranslate"><span class="pre">Atoms.from_atoms()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Model.html">Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Engine.html">Engine</a></li>
@@ -79,6 +87,53 @@
              
   <section id="atoms">
 <h1>Atoms<a class="headerlink" href="#atoms" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qmhub.atoms.Atoms">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qmhub.atoms.</span></span><span class="sig-name descname"><span class="pre">Atoms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/atoms.html#Atoms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.atoms.Atoms" title="Permalink to this definition"></a></dt>
+<dd><p>QMHub atom object</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qmhub.atoms.Atoms.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/atoms.html#Atoms.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.atoms.Atoms.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Stores position, charge, and element of atom object</p>
+<dl class="simple">
+<dt>Arge:</dt><dd><p>positons (optional):
+charges (optional):
+elements (optional):</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qmhub.atoms.Atoms.new">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_atoms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/atoms.html#Atoms.new"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.atoms.Atoms.new" title="Permalink to this definition"></a></dt>
+<dd><p>Appends the number of atoms to arrays of atom positions, charges, and elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls ()</strong></p></li>
+<li><p><strong>n_atoms</strong> (<em>int</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qmhub.atoms.Atoms.from_atoms">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_atoms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qmhub/atoms.html#Atoms.from_atoms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qmhub.atoms.Atoms.from_atoms" title="Permalink to this definition"></a></dt>
+<dd><p>Appends an atoms positons, charge, and elements to arrays of atom positions, charges, and elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls ()</strong></p></li>
+<li><p><strong>atoms</strong> (<em>Atoms</em>)</p></li>
+<li><p><strong>index</strong> (<em>optionals</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
