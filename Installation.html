@@ -77,6 +77,70 @@
              
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<a class="reference internal image-reference" href="qmhub/docs/qmhub.png"><img alt="Alternative text" src="qmhub/docs/qmhub.png" style="width: 300px;" /></a>
+<p>install mambaforge or miniforge
+install numpy, scipy, and ipython</p>
+<p>you should now have seperate directroy with qmhub.ini, qmmm.inp, and qmmm.out
+you run qmhub in this directory
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qmhub</span> <span class="o">-</span><span class="n">t</span> <span class="n">qmmm</span><span class="o">.</span><span class="n">inp</span> <span class="n">qmhub</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="qmhub/docs/helpme.png"><img alt="Alternative text" src="qmhub/docs/helpme.png" style="width: 300px;" /></a>
+<p>Outside of this directory, run the following commands:
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">andysim</span><span class="o">/</span><span class="n">helpme</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">helpme</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">CMake</span><span class="o">/</span><span class="mf">3.9.6</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cp</span> <span class="n">cmake</span><span class="o">.</span><span class="n">sh</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">bash</span> <span class="n">cmake</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">make</span> <span class="n">helpmelib</span>
+<span class="n">cp</span> <span class="n">python</span><span class="o">/</span><span class="n">helpmelib</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">310</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">.</span><span class="n">so</span> <span class="o">/</span><span class="p">[</span><span class="n">pwd</span><span class="p">]</span><span class="o">/</span><span class="n">mambaforge</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="p">[</span><span class="n">python</span><span class="o">.</span><span class="n">version</span><span class="p">]</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">qmhub</span>
+</pre></div>
+</div>
+<p>N.B. you have your own cmake.sh for your server enviorment, for example:
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CXX=icpc PKG_CONFIG_PATH=~/mambaforge/lib/pkgconfig cmake .. -DFFTW_INCLUDES=$MKLROOT/include/fftw -DFFTW_LIBRARIES=$MKLROOT/lib/intel64 -DHAVE_FFTWF=1 -DHAVE_FFTWD=1 -DHAVE_FFTWL=1
+</pre></div>
+</div>
+<p>if you use an intel compilers, you will need to compile each time at the start of the session; run:
+..code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>module load intel/2020a
+export LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_core.so:$MKLROOT/lib/intel64/libmkl_sequential.so
+</pre></div>
+</div>
+<p>If errors are encountered, see: <a class="reference external" href="https://stackoverflow.com/questions/61341878/intel-mkl-fatal-error-when-running-kaldi-gst-live-demo">https://stackoverflow.com/questions/61341878/intel-mkl-fatal-error-when-running-kaldi-gst-live-demo</a></p>
+<p><strong>Command Line Usage</strong></p>
+<p>Generate the .inp input file manually
+use mdanaylsis, a script with pdb, or anything that can generate data in right format
+<a class="reference external" href="https://docs.mdanalysis.org/stable/index.html">https://docs.mdanalysis.org/stable/index.html</a></p>
+<p>&lt;I hate markdown&gt;
+qmmm.inp contains:</p>
+<blockquote>
+<div><p>first 3 columns xyz cordiantes</p>
+<p>4th column is charge for MM</p>
+<p>5th column is atomic number for QM</p>
+</div></blockquote>
+<p>run:
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qmhub</span> <span class="o">-</span><span class="n">t</span> <span class="n">qmmm</span><span class="o">.</span><span class="n">inp</span> <span class="n">qmhub</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+<p>View the output in qmmm.out as a coordinate list</p>
+<p>N.B. in qmmm.ini, nrespa is the number of MM cycles between QM cycles</p>
+<p><strong>Python Module</strong></p>
+<p>qmhub can be used as a python moduele that can do all and more of qmhub commandline functionality</p>
+<blockquote>
+<div><p>take arrays from .nc and .psf formate and copy them directly into QMhub with pdb, mdanaylsis, anything</p>
+<p>force matching</p>
+<p>Maxmimum likelihood potentional training</p>
+<dl class="simple">
+<dt>energy weighting</dt><dd><p>by useing python to extract the desired array from qmhub and do maniputations or seperate from simulations</p>
+</dd>
+</dl>
+</div></blockquote>
 </section>
 
 
